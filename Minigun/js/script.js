@@ -4280,22 +4280,21 @@ $(document).on('keydown', function (e) {
 
 
 //SLIDERS
-if($('.slider').length>0){
-	$('.slider').slick({
+if($('.first-slider').length>0){
+	$('.first-slider').slick({
 	autoplay: true,
-	//infinite: false,
-	dots: true,
-	arrows: false,
+	// infinite: false,
+	dots: false,
+	arrows: true,
 	accessibility:false,
 	slidesToShow:1,
 	speed: 1500,
 	autoplaySpeed: 3000,
 	//asNavFor:'',
 	//appendDots:
-	//appendArrows:$('.mainslider-arrows .container'),
-	// nextArrow:'<button type="button" class="slick-next"></button>',
-	// prevArrow:'<button type="button" class="slick-prev"></button>',
-
+	appendArrows:$('.first-arrow'),
+	nextArrow:'<button type="button" class="slick-next"></button>',
+	prevArrow:'<button type="button" class="slick-prev"></button>',
 	responsive: [{
 		breakpoint: 768,
 		settings: {	variableWidth: true,
@@ -4331,7 +4330,21 @@ wow.init();
 
 //parallax
 var scene = document.getElementById('header');
-var parallaxInstance = new Parallax(scene);;
+var parallaxInstance = new Parallax(scene);
+
+//ibg
+
+function ibg(){
+
+	let ibg=document.querySelectorAll(".ibg");
+	for (var i = 0; i < ibg.length; i++) {
+	if(ibg[i].querySelector('img')){
+	ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
+	}
+	}
+	}
+	
+	ibg();;
 const block = document.querySelectorAll('.block');
 
 

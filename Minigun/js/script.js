@@ -4282,7 +4282,7 @@ $(document).on('keydown', function (e) {
 //SLIDERS
 if($('.first-slider').length>0){
 	$('.first-slider').slick({
-	autoplay: true,
+	// autoplay: true,
 	// infinite: false,
 	dots: false,
 	arrows: true,
@@ -4290,16 +4290,16 @@ if($('.first-slider').length>0){
 	slidesToShow:1,
 	speed: 1500,
 	autoplaySpeed: 3000,
+	adaptiveHeight: true,
 	//asNavFor:'',
 	//appendDots:
 	appendArrows:$('.first-arrow'),
-	nextArrow:'<button type="button" class="slick-next"></button>',
-	prevArrow:'<button type="button" class="slick-prev"></button>',
-	responsive: [{
-		breakpoint: 768,
-		settings: {	variableWidth: true,
-		centerMode: true}
-		}]
+	// nextArrow:'<button type="button" class="slick-next"></button>',
+	// prevArrow:'<button type="button" class="slick-prev"></button>',
+	// responsive: [{
+	// 	breakpoint: 768,
+	// 	settings: {	adaptiveHeight: true}
+	// 	}]
 	});
 }
 
